@@ -1,8 +1,13 @@
+const status = document.querySelector('#status');
+const mascot = document.querySelector('.mascot');
+
 document.querySelector('#helloBtn').addEventListener('click', () => {
-  document.querySelector('#status').textContent = 'Hello from GitHub Pages!';
+  status.textContent = 'Hello from GitHub Pages! 💖';
+  mascot.textContent = '🐱';
 });
 
 document.querySelector('#themeBtn').addEventListener('click', () => {
   const dark = document.body.classList.toggle('dark');
-  document.querySelector('#status').textContent = dark ? 'Dark theme on' : 'Light theme on';
+  status.textContent = dark ? 'Night mode on 🌙' : 'Day mode on ☀️';
+  mascot.textContent = dark ? '🦉' : '🐰';
 });
