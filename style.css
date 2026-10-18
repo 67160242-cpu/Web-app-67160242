@@ -1,12 +1,21 @@
-:root { --bg: #eef4fb; --card: #ffffff; --text: #1b2a3a; --btn: #0f9d58; }
-body.dark { --bg: #121a24; --card: #1d2733; --text: #e8eef5; --btn: #f4b400; }
-body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text);
-       margin: 0; min-height: 100vh; display: grid; place-items: center; transition: background .3s; }
-.card { background: var(--card); padding: 40px; border-radius: 18px; max-width: 560px;
-        box-shadow: 0 12px 32px #1e3a5f20; text-align: center; margin: 24px; }
-section { margin-top: 22px; text-align: left; }
-h2 { border-bottom: 2px solid var(--btn); padding-bottom: 4px; }
-.actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-button { background: var(--btn); color: white; border: 0;
-         padding: 12px 22px; border-radius: 8px; cursor: pointer; }
-body.dark button { color: #121a24; }
+:root { --bg: #fff0f6; --card: #ffffff; --text: #5a3d5c; --btn: #ff7eb6; --accent: #ffc2dd; }
+body.dark { --bg: #2b2342; --card: #3a2f5b; --text: #f5e9ff; --btn: #b39cff; --accent: #5b4a8a; }
+body { font-family: 'Mali', system-ui, sans-serif; background: var(--bg); color: var(--text);
+       margin: 0; min-height: 100vh; display: grid; place-items: center; transition: background .4s, color .4s; }
+.card { background: var(--card); padding: 36px; border-radius: 28px; max-width: 560px;
+        border: 3px dashed var(--accent); box-shadow: 0 12px 32px #ff7eb633;
+        text-align: center; margin: 24px; transition: background .4s; }
+.mascot { font-size: 64px; animation: bounce 2s ease-in-out infinite; }
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+h1 { margin: 8px 0; color: var(--btn); }
+.name { font-weight: 600; }
+#status { background: var(--accent); border-radius: 999px; display: inline-block; padding: 6px 18px; }
+section { margin-top: 22px; text-align: left; background: var(--bg); border-radius: 18px; padding: 8px 20px 14px; }
+h2 { color: var(--btn); margin-bottom: 6px; }
+.actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+button { background: var(--btn); color: white; border: 0; font-family: inherit; font-size: 16px;
+         padding: 12px 22px; border-radius: 999px; cursor: pointer; box-shadow: 0 4px 0 #0002;
+         transition: transform .15s; }
+button:hover { transform: scale(1.08) rotate(-2deg); }
+button:active { transform: translateY(3px); box-shadow: none; }
+body.dark button { color: #2b2342; }
