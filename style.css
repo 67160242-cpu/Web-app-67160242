@@ -1,0 +1,12 @@
+:root { --bg: #eef4fb; --card: #ffffff; --text: #1b2a3a; --btn: #0f9d58; }
+body.dark { --bg: #121a24; --card: #1d2733; --text: #e8eef5; --btn: #f4b400; }
+body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text);
+       margin: 0; min-height: 100vh; display: grid; place-items: center; transition: background .3s; }
+.card { background: var(--card); padding: 40px; border-radius: 18px; max-width: 560px;
+        box-shadow: 0 12px 32px #1e3a5f20; text-align: center; margin: 24px; }
+section { margin-top: 22px; text-align: left; }
+h2 { border-bottom: 2px solid var(--btn); padding-bottom: 4px; }
+.actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+button { background: var(--btn); color: white; border: 0;
+         padding: 12px 22px; border-radius: 8px; cursor: pointer; }
+body.dark button { color: #121a24; }
